@@ -1,0 +1,53 @@
+{
+  "name": "dsh-translate-card",
+  "version": "0.1.0",
+  "description": "Select-to-translate card for DeepSeek Harness with a configurable chain of translation backends and fallbacks",
+  "author": "waldemarpng",
+  "homepage": "https://github.com/waldemarpng/dsh-translate-card#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waldemarpng/dsh-translate-card.git"
+  },
+  "bugs": {
+    "url": "https://github.com/waldemarpng/dsh-translate-card/issues"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "assets",
+    "docs",
+    "test",
+    "scripts",
+    "cordis.patch.yml",
+    "CHANGELOG.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "for f in lib/*.js assets/*.js; do node --check \"$f\" || exit 1; done",
+    "test": "node --test test/*.test.js",
+    "guard": "node scripts/guard.mjs",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "translate",
+    "translation",
+    "selection",
+    "select-to-translate",
+    "ollama",
+    "llm"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
